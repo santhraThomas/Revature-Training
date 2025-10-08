@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- Define the two payment beans here -->
+    <bean id="creditCardPayment" class="com.revature.spring.payment.CreditCardPaymentMethod"/>
+    <bean id="payPalPayment" class="com.revature.spring.payment.PayPalPaymentMethod"/>
+
+    <!-- Define the payment processor and inject one type of payment -->
+        <bean id="paymentProcessor" class="com.revature.spring.payment.PaymentProcessor">
+            <property name="paymentMethod" ref="creditCardPayment"/>
+
+        <!-- If need to switch the payment type to be Paypal you can use this line of code -->
+            <!-- <property name="paymentMethod" ref="payPalPayment"/> -->
+
+    </bean>
+</beans>
