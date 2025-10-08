@@ -10,4 +10,8 @@
     <bean id="messageService" class="com.revature.spring.ioc.MessageServce">
         <constructor-arg value="Hello from Spring Configuration"/>
     </bean>
+
+    <!-- <bean id="messageService1" class="com.revature.spring.ioc.MessageServce">
+        <constructor-arg value="Hello from Spring Configuration Again"/>
+    </bean> -->
 </beans>

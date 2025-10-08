@@ -9,9 +9,16 @@ public class Main {
         ApplicationContext context = new ClassPathXmlApplicationContext("appContext.xml");
         // retrieve bean from Spring container
         MessageServce myMsg = context.getBean("messageService", MessageServce.class);
-
+        // Call method on the bean
         myMsg.printMessage();
 
+        ((ClassPathXmlApplicationContext) context).close();
+        
+        /* MessageServce myMsg1 = context.getBean("messageService1", MessageServce.class);
+
+        myMsg1.printMessage(); 
+        
+        */
         
     }
 }
