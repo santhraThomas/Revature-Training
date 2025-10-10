@@ -1,15 +1,11 @@
 package com.revature.spring.rest.spring_rest.controller;
 
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
 import com.revature.spring.rest.spring_rest.model.User;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.*;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 
 
 @RestController
@@ -38,7 +34,7 @@ public class UserController {
                     .map(user -> new ResponseEntity<>(user, HttpStatus.OK))
                     .orElse(new ResponseEntity<>(HttpStatus.NOT_FOUND));
     }
-
+    @GetMapping // Handles GET requests to /users
     public List<User> getAllUsers() {
         return users; // Returns the list of all users
     }
