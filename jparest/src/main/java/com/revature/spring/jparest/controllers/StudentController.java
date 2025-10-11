@@ -37,7 +37,7 @@ public class StudentController {
     
     // You can add a path variable to get one single student by id if needed example below
     @GetMapping("/students/{studentId}")
-    public Student getStudent(@RequestParam Long studentId){
+    public Student getStudent(@PathVariable Long studentId){
         return studentService.getStudent(studentId);
     }
 

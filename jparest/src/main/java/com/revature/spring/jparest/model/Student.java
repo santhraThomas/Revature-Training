@@ -23,4 +23,18 @@ public class Student {
 
     private String course;
 
+    public Student(String name, String email, String course) {
+        this.name = name;
+        this.email = email;
+        this.course = course;
+    }
+
+    public void setId(Long id) {
+        this.studentId = id;
+    }
+
+    public Long getId() {
+        return this.studentId;
+    }
+
 }
