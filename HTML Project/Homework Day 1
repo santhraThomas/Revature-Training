@@ -1,0 +1,15 @@
+# HOMEWORK
+
+## 1. Difference between **BeanFactory** and **ApplicationContext**
+
+Both **BeanFactory** and **ApplicationContext** are Spring containers used to create and manage bean objects in the Spring Framework.  
+
+| Feature | **BeanFactory** | **ApplicationContext** |
+|----------|-----------------|------------------------|
+| **Purpose** | Provides basic functionalities for managing beans. | Provides advanced enterprise-level features. |
+| **Use Case** | Suitable for lightweight or standalone applications. | Ideal for large-scale or enterprise applications. |
+| **Memory Usage** | Consumes less memory. | Requires more memory due to added features. |
+| **Features** | Lazy initialization of beans. | Eager initialization, supports internationalization, event propagation, and application-level contexts. |
+
+> **In short:**  
+> `BeanFactory` is lightweight and basic, while `ApplicationContext` is feature-rich and better suited for enterprise-level applications.
